@@ -1,792 +1,1102 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<title>Five of Hearts | Building for the next web</title>
-		<meta name="description" content="Five of Hearts a Bootstrap-based, Responsive HTML5 Template">
-		<meta name="author" content="htmlcoder.me">
-
-		<!-- Mobile Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="images/favicon.ico">
-
-		<!-- Web Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
-
-		<!-- Bootstrap core CSS -->
-		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-
-		<!-- Font Awesome CSS -->
-		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
-
-		<!-- Plugins -->
-		<link href="css/animations.css" rel="stylesheet">
-
-		<!-- Five of Hearts core CSS file -->
-		<link href="css/style.css" rel="stylesheet">
-
-		<!-- Custom css --> 
-		<link href="css/custom.css" rel="stylesheet">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Five of Hears | Quality web agency</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/jquery.bxslider.min.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet'>
+		<style type="text/css">
+		body {
+			font-family: 'Josefin Sans', sans-serif;
+		}
+		section {
+			width: 100%;
+			height: 100vh;
+		}
+		h2 {
+			margin-top: 90px;
+			margin-bottom: 30px;
+			font-size: 60px;
+			line-height: 70px;
+			text-align: center;
+		}
+		input, textarea {
+			box-shadow: none !important;
+			-webkit-box-shadow: none !important;
+			border: none !important;
+			border-radius: 0 !important;
+		}
+		h1 span {
+			color: #ff3a2f;
+		}
+		#front_page {
+			display: table;
+			background: url('img/front_page.jpg');
+			background-size: cover;
+			background-position: center;
+		}
+		.navbar-default {
+			margin-bottom: 0;
+			background-image: none;
+			background-color: #fff;
+			opacity: 0.85;
+		}
+		.navbar-brand {
+			height: auto;
+			margin-top: 1px;
+			margin-bottom: 1px;
+		}
+		.navbar-brand h1 {
+			margin: 0;
+			color: #1d1d1d;
+			font-size: 25px;
+		}
+		.navbar-nav {
+			margin-top: 2px;
+			margin-bottom: 2px;
+		}
+		.navbar-nav li:nth-child(1) a {
+			font-size: 31px;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+		.navbar-nav li:nth-child(2) a {
+			font-size: 29px;
+			padding-top: 14px;
+			padding-bottom: 12px;
+		}
+		.navbar-nav li:nth-child(3) a {
+			font-size: 25px;
+			padding-top: 16px;
+			padding-bottom: 14px;
+		}
+		.navbar-nav li:nth-child(4) a {
+			font-size: 26px;
+			padding-top: 17px;
+		    padding-bottom: 12px;
+		}
+		.navbar-nav li:nth-child(5) a {
+			font-size: 29px;
+			padding-top: 12px;
+			padding-bottom: 14px;
+		}
+		.navbar-default .navbar-nav > .active > a {
+			background-color: transparent;
+		    box-shadow: none;
+		    background-image: none;
+		    color: #ff3a2f;
+		}
+		.navbar-default .navbar-nav > li > a {
+			color: #1d1d1d;
+		}
+		.navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > li > a:focus {
+			color: #ff3a2f;
+			background-color: transparent;
+		}
+		#intro {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+		#intro img {
+			width: 250px;
+			height: auto;
+		}
+		#intro p {
+			color: #fff;
+			text-shadow: 1px 1px #1d1d1d;
+		}
+		#intro p:nth-child(2) {
+			margin-top: 20px;
+			margin-bottom: 10px;
+			font-size: 40px;
+			line-height: 45px;
+		}
+		#intro p:nth-child(3) {
+			margin-bottom: 0px;
+			font-size: 30px;
+			line-height: 35px;
+		}
+		#about {
+			background: url('img/about.jpg');
+			background-size: cover;
+			background-position: center;
+		}
+		#about h2 {
+			color: #1d1d1d;
+		}
+		#about_content p {
+			font-size: 20px;
+			color: #1d1d1d;
+		}
+		#about .decor {
+			fill: #7dcc93;
+			bottom: -100%;
+		}
+		#services {
+			background: url('img/services.jpg');
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+		}
+		#services h2 {
+		    margin-bottom: 55px;
+		}
+		#services h3 {
+			font-size: 30px;
+			margin-top: 0;
+			line-height: 30px;
+			margin-bottom: 10px;
+		}
+		#services i {
+			font-size: 30px;
+		}
+		#services p {
+			font-size: 18px;
+			margin-bottom: 25px;
+		}
+		#above_decor {
+			width: 100%;
+			height: 10%;
+			background: #EABD56;
+			position: absolute;
+			bottom: -207.5%;
+		}
+		#services .decor {
+			fill: #fff;
+			bottom: -207.5%;
+		}
+		.align_left {
+			text-align: left;
+		}
+		.align_right {
+			text-align: right;
+		}
+		#portfolio {
+			text-align: center;
+		}
+		#portfolio img {
+			width: 90%;
+		}
+		#portfolio img:hover {
+			cursor: pointer;
+		}
+		#portfolio p {
+			font-size: 18px;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+		.project_names:after {
+			content: "";
+		    position: absolute;
+		    left: 0;
+		    bottom: 0;
+		    width: 70px;
+		    height: 2px;
+		    background: #ff3a2f;
+		    left: 50%;
+		    margin-left: -35px;
+		}
+		.project_names {
+			padding-bottom: 5px;
+			margin-bottom: 0 !important;
+		}
+		.portfolio_row {
+			margin-bottom: 15px;
+		}
+		#portfolio .decor {
+			fill: #FB4240;
+			bottom: -300%;
+		}
+		.decor {
+			width: 100%;
+			height: 60px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			fill: #FFF;
+		}
+		#contact {
+			background: url('img/contact.jpg');
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+		}
+		#contact input, #contact textarea {
+			width: 100%;
+		}
+		#contact textarea {
+			max-width: 100%;
+			height: 200px;
+			max-height: 200px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		#contact p {
+			font-size: 18px;
+			margin-bottom: 40px;
+			text-align: center;
+		}
+		#contact .btn {
+			background-image: none;
+			box-shadow: none;
+			-webkit-box-shadow: none;
+			border: 1px solid #fff;
+			border-radius: 0;
+			background-color: transparent;
+			color: #fff;
+			background-repeat: no-repeat;
+			font-size: 18px;
+			text-shadow: none;
+			width: 100px;
+		}
+		#contact .btn:hover {
+			background-color: #fff;
+			color: #ff3a2f;
+		}
+		#contact_form_heading {
+			font-size: 28px !important;
+		}
+		.no_bottom {
+			margin-bottom: 0 !important;
+		}
+		#footer {
+			position: absolute;
+			bottom: -400%;
+			width: 100%;
+			padding-top: 15px;
+			background-color: #fff;
+		}
+		#footer i {
+			color: #fff;
+			background-color: #ff3a2f;
+			border: 1px solid #ff3a2f;
+			border-radius: 50px;
+			font-size: 25px;
+			width: 55px;
+			height: 55px;
+		}
+		#footer p {
+			color: #1d1d1d;
+			margin-bottom: 15px;
+		}
+		#social_icons a {
+			margin-left: 3px;
+			margin-right: 3px;
+		}
+		#social_icons a:nth-child(1) i {
+			padding: 14px 19px;
+		}
+		#social_icons a:nth-child(2) i {
+			padding: 14px 15px;
+		}
+		#social_icons a:nth-child(3) i {
+			padding: 14px 10px;
+		}
+		#social_icons a:nth-child(4) i {
+			padding: 14px 16px;
+		}
+		#social_icons a:nth-child(5) i {
+			padding: 14px;
+		}
+		#social_icons a:hover {
+			text-decoration: none;
+		}
+		#social_icons a:hover i {
+			background-color: #fff;
+			color: #ff3a2f;
+		}
+		#services h3 > i {
+			display: none;
+		}
+		.modal-content {
+			border-top-left-radius: 50px;
+		    border-top-right-radius: 0;
+		    border-bottom-left-radius: 0;
+		    border-bottom-right-radius: 50px;
+		}
+		.modal-header {
+			background-color: #FB4240;
+			border-top-left-radius: 50px;
+		}
+		.modal-title {
+			text-align: center;
+		    text-transform: uppercase;
+		    color: #fff;
+		    font-size: 20px;
+		}
+		.close {
+			opacity: 1;
+			text-shadow: none;
+			color: #fff;
+			font-size: 40px;
+			margin-top: -13px !important;
+		}
+		#navbar span {
+			display: none;
+		}
+		.modal_pic {
+			width: 100%;
+			max-width: 500px;
+		}
+		.modal-body {
+			text-align: center;
+		}
+		.modal-body .divider {
+			width: 100%;
+		}
+		.modal-body .btn-primary {
+			background-image: none;
+			box-shadow: none;
+			-webkit-box-shadow: none;
+			border: 1px solid #FB4240;
+			border-radius: 0;
+			background-color: transparent;
+			color: #FB4240;
+			background-repeat: no-repeat;
+			font-size: 18px;
+			text-shadow: none;
+			width: 136px;
+		    margin-bottom: 10px;
+		}
+		.modal-body .btn-primary:hover {
+			background-color: #FB4240;
+			color: #fff;
+		}
+		.testimonials {
+			text-align: center;
+		    margin: 30px 40px;
+		}
+		.testimonials a {
+			color: #FB4240;
+		}
+		.testimonials img {
+			width: 100px;
+			border: 3px solid #FB4240;
+			border-radius: 150px;
+			display: inline;
+		}
+		.testimonials p {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.testimonials q {
+			font-size: 16px;
+			font-style: italic;
+		}
+		.bx-wrapper .bx-prev {
+			left: 0;
+		    background: url(img/left.png);
+		}
+		.bx-wrapper .bx-prev:hover {
+			background: url(img/left-hover.png);
+			background-position: 0 0;
+		}
+		.bx-wrapper .bx-next {
+		    background: url(img/right.png);
+		}
+		.bx-wrapper .bx-next:hover {
+			background: url(img/right-hover.png);
+			background-position: 0 0;
+		}
+		.bx-wrapper .bx-controls-direction a {
+			width: 30px;
+			height: 37px;
+		}
+		.bx-wrapper .bx-pager {
+			display: none;
+		}
+		.bx-wrapper {
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+		.bx-wrapper .bx-viewport {
+			border: 1px solid #ccc;
+			box-shadow: none;
+			-webkit-box-shadow: none;
+		}
+		#down_arrow {
+			text-align: center;
+			height: 50px;
+			position: absolute;
+			left: 50%;
+			bottom: 60px;
+		}
+		#down_arrow img {
+			width: 60px !important;
+			height: auto;
+			-webkit-animation: bounce 2s infinite ease-in-out;
+			position: relative;
+			left: -50%;
+			cursor: pointer;
+		}
+		.navbar-toggle {
+			margin-top: 13px;
+			margin-bottom: 13px;
+		}
+		@-webkit-keyframes bounce {
+			0%, 20%, 60%, 100% { -webkit-transform: translateY(0); }
+		    40% { -webkit-transform: translateY(-20px); }
+			80% { -webkit-transform: translateY(-10px); }
+		}
+		@media screen and (max-width: 1600px) {
+			h2 {
+				font-size: 50px;
+				line-height: 58px;
+				margin-top: 85px;
+				margin-bottom: 25px;
+			}
+			#about_content p {
+				font-size: 18px;
+			}
+			#services h3 {
+				font-size: 25px;
+				line-height: 25px;
+			    margin-bottom: 5px;
+			}
+			#services i {
+				font-size: 25px;
+			}
+			#services p {
+				margin-bottom: 20px;
+				font-size: 16px;
+			}
+			#portfolio p {
+				font-size: 16px;
+			    margin-bottom: 0;
+			}
+			.portfolio_row {
+			    margin-bottom: 15px;
+			    margin-top: 15px;
+			}
+			.project_names:after {
+				width: 60px;
+				margin-left: -30px;
+			}
+			#portfolio img {
+			    width: 70%;
+			}
+			#contact_form_heading {
+			    font-size: 23px !important;
+			}
+			#contact p {
+				font-size: 16px;
+			    margin-bottom: 10px;
+			}
+		}
+		@media screen and (max-width: 1366px) {
+			h2 {
+				font-size: 42px;
+				line-height: 50px;
+				margin-top: 65px;
+				margin-bottom: 20px;
+			}
+			#about_content p {
+				font-size: 17px;
+			}
+			#services h3 {
+				font-size: 22px;
+			    line-height: 22px;
+			}
+			#services i {
+				font-size: 22px;
+			}
+			#services p {
+				font-size: 14px;
+				margin-bottom: 15px;
+			}
+			#portfolio p {
+				font-size: 14px;
+			}
+			.project_names:after {
+				width: 50px;
+				margin-left: -25px;
+			}
+			#portfolio img {
+				width: 55%;
+			}
+			#contact_form_heading {
+				font-size: 20px !important;
+			}
+			#contact p {
+				font-size: 14px;
+			}
+			#contact textarea {
+				height: 140px;
+				max-height: 140px;
+			}
+		}
+		@media screen and (max-width: 1199px) {
+			section {
+				height: auto;
+				padding-bottom: 65px;
+			}
+			#front_page {
+				height: 100vh;
+			}
+			.decor, #above_decor {
+				display: none;
+			}
+			#front_page .decor {
+				display: block;
+			}
+			#intro img {
+			    width: 200px;
+			}
+			#about {
+				background-image: none;
+				background-color: #fff;
+			}
+			#services {
+				background-image: none;
+				background-color: #7dcc93;
+			}
+			#services i {
+				display: none;
+			}
+			#services h3 > i {
+				display: inline-block;
+				width: 22px;
+				margin-right: 13px;
+			}
+			#services p {
+				margin-left: 35px;
+			}
+			.align_right {
+				text-align: left;
+			}
+			#footer {
+			    position: initial;
+			    padding-bottom: 5px;
+			    margin-top: 65px;
+			}
+			#contact {
+				background-image: none;
+				background-color: #FB4240;
+				padding-bottom: 0;
+			}
+			#portfolio .col-lg-4 {
+				width: 33.333333%;
+				float: left;
+			}
+			#portfolio .col-lg-offset-4 {
+				width: 100%;
+			}
+			#portfolio img {
+				width: 100%;
+			}
+			#portfolio p {
+			    font-size: 20px;
+			}
+			.project_names:after {
+			    width: 70px;
+			    margin-left: -35px;
+			}
+			#first_contact_input {
+				margin-bottom: 15px;
+			}
+		}
+		@media screen and (max-width: 768px) {
+			#navbar span {
+			    display: inline-block;
+			    font-size: 20px;
+			}
+			#portfolio .col-lg-4 {
+				width: 100%;
+			}
+			.navbar-default {
+				opacity: 1;
+			}
+			.navbar-nav li a i {
+				width: 35px;
+				text-align: center;
+			}
+			#intro p:nth-child(2) {
+				font-size: 35px;
+			    line-height: 40px;
+			}
+			#intro p:nth-child(3) {
+				font-size: 25px;
+				line-height: 30px;
+			}
+			.portfolio_row {
+				margin: 0;
+			}
+			#portfolio img {
+				margin-top: 20px;
+			}
+		}
+		</style>
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
 	</head>
-
-	<body class="no-trans">
-		<!-- scrollToTop -->
-		<!-- ================ -->
-		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
-
-		<!-- header start -->
-		<!-- ================ --> 
-		<header class="header fixed clearfix navbar navbar-fixed-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-
-						<!-- header-left start -->
-						<!-- ================ -->
-						<div class="header-left clearfix">
-
-							<!-- logo -->
-							<div class="logo smooth-scroll">
-								<a href="#banner"><img id="logo" src="images/logo.png" alt="Five of Hearts"></a>
-							</div>
-
-							<!-- name-and-slogan -->
-							<div class="site-name-and-slogan smooth-scroll">
-								<div class="site-name"><a href="#banner">Five of Hearts</a></div>
-								<div class="site-slogan">Building for the next web</div>
-							</div>
-
-						</div>
-						<!-- header-left end -->
-
-					</div>
-					<div class="col-md-8">
-
-						<!-- header-right start -->
-						<!-- ================ -->
-						<div class="header-right clearfix">
-
-							<!-- main-navigation start -->
-							<!-- ================ -->
-							<div class="main-navigation animated">
-
-								<!-- navbar start -->
-								<!-- ================ -->
-								<nav class="navbar navbar-default" role="navigation">
-									<div class="container-fluid">
-
-										<!-- Toggle get grouped for better mobile display -->
-										<div class="navbar-header">
-											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-												<span class="sr-only">Toggle navigation</span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
-											</button>
-										</div>
-
-										<!-- Collect the nav links, forms, and other content for toggling -->
-										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
-											<ul class="nav navbar-nav navbar-right">
-												<li class="active"><a href="#banner">Home</a></li>
-												<li><a href="#about">About</a></li>
-												<li><a href="#services">Services</a></li>
-												<li><a href="#portfolio">Portfolio</a></li>
-												<li><a href="#clients">Clients</a></li>
-												<li><a href="#contact">Contact</a></li>
-											</ul>
-										</div>
-
-									</div>
-								</nav>
-								<!-- navbar end -->
-
-							</div>
-							<!-- main-navigation end -->
-
-						</div>
-						<!-- header-right end -->
-
-					</div>
-				</div>
-			</div>
-		</header>
-		<!-- header end -->
-
-		<!-- banner start -->
-		<!-- ================ -->
-		<div id="banner" class="banner">
-			<div class="banner-image"></div>
-			<div class="banner-caption">
+	<body>
+		<section id="front_page">
+			<nav class="navbar navbar-default navbar-fixed-top">
 				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
-							<h1 class="text-center">We are <span>Five of Hearts</span></h1>
-							<p class="lead text-center">Quality Web Agency.</p>
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="">
+							<h1>Five of <span>Hearts</span></h1>
+						</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active">
+								<a href="#front_page">
+									<i class="fa fa-home" aria-hidden="true"></i>
+									<span>Home</span>
+								</a>
+							</li>
+							<li>
+								<a href="#about">
+									<i class="fa fa-info" aria-hidden="true"></i>
+									<span>About</span>
+								</a>
+							</li>
+							<li>
+								<a href="#services">
+									<i class="fa fa-magic" aria-hidden="true"></i>
+									<span>Services</span>
+								</a>
+							</li>
+							<li>
+								<a href="#portfolio">
+									<i class="fa fa-briefcase" aria-hidden="true"></i>
+									<span>Portfolio</span>
+								</a>
+							</li>
+							<li>
+								<a href="#contact">
+									<i class="fa fa-envelope" aria-hidden="true"></i>
+									<span>Contact</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div id="intro">
+				<img src="img/logo.png">
+				<p>Building for the next web</p>
+				<p>Quality web agency</p>
+				<div id="down_arrow">
+					<a href="#about">
+						<img src="img/down.png">
+					</a>
+				</div>
+			</div>
+			<svg class="decor" preserveAspectRatio="none" viewBox="0 0 100 100">
+				<path d="M0 0 L50 100 L100 0 L100 100 L0 100"></path>
+			</svg>
+		</section>
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-lg-offset-4">
+						<h2>About</h2>
+					</div>
+				</div>		
+				<div class="row">
+					<div class="col-lg-6 col-lg-offset-6">
+						<div id="about_content">
+							<p>Everyone can create a website nowadays. And we're not saying that you should not try it yourself. But in the end, you will come back to us.</p>
+							<p>We do not offer a website and if that's the only thing you want, we're probably not going to be compatible. We're here in the long run. To offer you marketing advice, design standards, user testing and so much more. We create a product.</p>
+							<p>Check out our customer reviews if you want to read what others are saying.</p>
+							<p>
+								<ul class="bxslider">
+									<li>
+										<div class="testimonials">
+											<img src="img/testimonial1.jpg">
+											<p>Henrik Skov | Founder of <a href="http://www.skovrejser.dk" target="_blank">Skov Rejser</a></p>
+											<q>Five of Hearts helped me with the domain <a href="http://henrikskov.com" target="_blank">henrikskov.com</a>. They are always fast to reply and didn't stop until I was happy with the website. Thanks a lot!</q>
+										</div>
+									</li>
+									<li>
+										<div class="testimonials">
+											<img src="img/testimonial2.jpg">
+											<p>Bogdan Dinescu | Vice-president of <a href="http://www.asociatia-sema.ro" target="_blank">SEMA Association</a></p>
+											<q>SEMA Association thank you for your special web design and web development services. We hope to have the pleasure of partnership with you for many years to come.</q>
+										</div>
+									</li>
+									<li>
+										<div class="testimonials">
+											<img src="img/testimonial3.jpg">
+											<p>Ioana Jurca | Owner of <a href="https://mj-magazine.dk" target="_blank">MJ Magazine</a></p>
+											<q>Through prompt and efficient support, I had a smooth and satisfying experience. This makes Five of Hearts professionalism come second in their ranking of attributes, being passed by quality.</q>
+										</div>
+									</li>
+								</ul>
+							</p>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<!-- banner end -->
-
-		<!-- section start -->
-		<!-- ================ -->
-		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+			</div>	
+		</section>
+		<section id="services">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
-						<h1 id="about" class="title text-center">About <span>Five of Hearts</span></h1>
-						<p class="lead text-center">Everyone can create a website nowadays. And we're not saying that you should not try it yourself. But in the end, you will come back to us.</p>
-						<div class="space"></div>
+					<div class="col-lg-4 col-lg-offset-4">
+						<h2>Services</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 align_right">
+						<h3><i class="fa fa-server" aria-hidden="true"></i>Web hosting</h3>
+						<p>Don't worry about your website going down. We're here to check it if everything goes wrong.</p>
+					</div>
+					<div class="col-lg-1 align_left">
+						<i class="fa fa-server" aria-hidden="true"></i>
+					</div>
+					<div class="col-lg-1 align_right col-lg-offset-2">
+						<i class="fa fa-compass" aria-hidden="true"></i>
+					</div>
+					<div class="col-lg-4">
+						<h3><i class="fa fa-compass" aria-hidden="true"></i>Cross-browser support</h3>
+						<p>Tons of screen-sizes on tons of different browsers. The same functionality on all of them.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 align_right">
+						<h3><i class="fa fa-wordpress" aria-hidden="true"></i>Wordpress development</h3>
+						<p>We're not reinventing the wheel. That would be foolish. But we do work around it to offer you the best platform out there changed specifically for your needs.</p>
+					</div>
+					<div class="col-lg-1 align_left">
+						<i class="fa fa-wordpress" aria-hidden="true"></i>
+					</div>
+					<div class="col-lg-1 align_right col-lg-offset-2">
+						<i class="fa fa-lock" aria-hidden="true"></i>
+					</div>
+					<div class="col-lg-4">
+						<h3><i class="fa fa-lock" aria-hidden="true"></i>Website security</h3>
+						<p>Having a degree in this area, we know how important client information is. This could be a deal-breaker for products and their userbase if done wrong.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 align_right">
+						<h3><i class="fa fa-tablet" aria-hidden="true"></i>Responsive design</h3>
+						<p>Mobile, tablets, laptops, tv's and pretty much anything that has a screen is covered. We're working with the latest frameworks.</p>
+					</div>
+					<div class="col-lg-1 align_left">
+						<i class="fa fa-tablet" aria-hidden="true"></i>
+					</div>
+					<div class="col-lg-1 align_right col-lg-offset-2">
+						<i class="fa fa-copyright" aria-hidden="true"></i>
+					</div>
+					<div class="col-lg-4">
+						<h3><i class="fa fa-copyright" aria-hidden="true"></i>Branding</h3>
+						<p>A logo's not enough. We'll show you how to be in the top of your class, showing people you mean business.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 align_right">
+						<h3><i class="fa fa-bolt" aria-hidden="true"></i>Speed optimization</h3>
+						<p>It goes without saying that sites will be fast. Lighting fast. We know all the tricks to load your site instantly for the enduser.</p>
+					</div>
+					<div class="col-lg-1 align_left">
+						<i class="fa fa-bolt" aria-hidden="true"></i>
+					</div>
+					<div class="col-lg-1 align_right col-lg-offset-2">
+						<i class="fa fa-globe" aria-hidden="true"></i>
+					</div>
+					<div class="col-lg-4">
+						<h3><i class="fa fa-globe" aria-hidden="true"></i>Online marketing</h3>
+						<p>You have a website, but that's just half of the work done. We'll help you make your first campaigns and figure which social media you should use.</p>
+					</div>
+				</div>
+			</div>		
+		</section>
+		<section id="portfolio">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-lg-offset-4">
+						<h2>Portfolio</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2">
+						<p>From big to small to little details, we've worked extra hard to know that our clients are pleased with our work. But enough chit-chat, let's get straight to the point and show you our finished projects.</p>
+					</div>
+				</div>
+				<div class="row portfolio_row">
+					<div class="col-lg-4">
+						<img src="img/portfolio1.png" data-toggle="modal" data-target="#modal_1">
+						<p class="project_names">Anca GV Blog</p>
+					</div>
+					<div class="col-lg-4">
+						<img src="img/portfolio2.png" data-toggle="modal" data-target="#modal_2">
+						<p class="project_names">Lemony App</p>
+					</div>
+					<div class="col-lg-4">
+						<img src="img/portfolio3.png" data-toggle="modal" data-target="#modal_3">
+						<p class="project_names">MJ Magazine</p>
+					</div>
+				</div>
+				<div class="row portfolio_row">
+					<div class="col-lg-4">
+						<img src="img/portfolio4.png" data-toggle="modal" data-target="#modal_4">
+						<p class="project_names">SEMA Association</p>
+					</div>
+					<div class="col-lg-4">
+						<img src="img/portfolio5.png" data-toggle="modal" data-target="#modal_5">
+						<p class="project_names">Henrik Skov</p>
+					</div>
+					<div class="col-lg-4">
+						<img src="img/portfolio6.png" data-toggle="modal" data-target="#modal_6">
+						<p class="project_names">Tech Dictionary</p>
+					</div>
+				</div>
+			</div>
+			<svg class="decor" preserveAspectRatio="none" viewBox="0 0 100 100">
+				<path d="M50 0 L100 100 L100 0 L100 100 L0 100"></path>
+			</svg>	
+		</section>
+		<section id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-lg-offset-4">
+						<h2>Contact</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<p id="contact_form_heading">Got an idea? Let's make it happen!</p>
 						<div class="row">
-							<div class="col-md-6">
-								<img src="images/section-image-1.png" alt="">
-								<div class="space"></div>
+							<div class="col-lg-6">
+								<input id="first_contact_input" class="form-control" type="text" placeholder="Name">
 							</div>
-							<div class="col-md-6">
-								<p>We do not offer a website and if that's the only thing you want, we're probably not going to be compatible. We're here in the long run. To offer you marketing advice, design standards, user testing and so much more. We create a product.</p>
-								<p>Check out our customer reviews if you want to read what others are saying.</p>
-								<ul class="list-unstyled" style="display:none;">
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Lorem ipsum dolor sit amet</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Reiciendis deleniti neque aliquid</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Ipsam fuga error commodi</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Lorem ipsum dolor sit amet</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Dignissimos molestiae necessitatibus</li>
-								</ul>
+							<div class="col-lg-6">
+								<input class="form-control" type="text" placeholder="E-Mail">
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- section end -->
-
-		<!-- section start -->
-		<!-- ================ -->
-		<div class="section translucent-bg bg-image-1 blue">
-			<div class="container object-non-visible" data-animation-effect="fadeIn">
-				<h1 id="services"  class="text-center title">Five of Hearts Services</h1>
-				<div class="space"></div>
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="media">
-							<div class="media-body text-right">
-								<h4 class="media-heading">Web hosting</h4>
-								<p>Don't worry about your website going down. We're here to check it if everything goes wrong.</p>
-							</div>
-							<div class="media-right">
-								<i class="fa fa-server"></i>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-body text-right">
-								<h4 class="media-heading">Wordpress development</h4>
-								<p>We're not reinventing the well. That would be foolish. But we do work around it to offer you the best platform out there changed for your needs.</p>
-							</div>
-							<div class="media-right">
-								<i class="fa fa-wordpress"></i>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-body text-right">
-								<h4 class="media-heading">Responsive design</h4>
-								<p>Mobile, tablets, laptops, tv's and pretty much anything that has a screen is covered. We're working with the latest frameworks to know you're not missing any userbase.</p>
-							</div>
-							<div class="media-right">
-								<i class="fa fa-tablet"></i>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-body text-right">
-								<h4 class="media-heading">Speed optimization</h4>
-								<p> It goes without saying that sites will be fast. Lighting fast. We know all the tricks to load your site instantly for the enduser.</p>
-							</div>
-							<div class="media-right">
-								<i class="fa fa-bolt"></i>
-							</div>
-						</div>
-					</div>
-					<div class="space visible-xs"></div>
-					<div class="col-sm-6">
-						<div class="media">
-							<div class="media-left">
-								<i class="fa fa-safari"></i>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">Cross-browser support</h4>
-								<p>Tons of screen-sizes on tons of different browsers. The same functionality on all of them.</p>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-left">
-								<i class="fa fa-lock"></i>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">Website security</h4>
-								<p>Having a degree in this area, we know how important client information is. This could be a deal-breaker for products and their userbase if done wrong.</p>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-left">
-								<i class="fa fa-registered"></i>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">Branding</h4>
-								<p>A logo's not enough. We'll show you how to be in the top of your class, showing people you mean business.</p>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-left">
-								<i class="fa fa-globe"></i>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">Online marketing</h4>
-								<p>You have a website, but that's just half of the work done. We'll help you make your first campaigns and figure which social media you should be on.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- section end -->
-
-		<!-- section start -->
-		<!-- ================ -->
-		<div class="default-bg space blue">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<h1 class="text-center">Let's Work Together!</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- section end -->
-
-		<!-- section start -->
-		<!-- ================ -->
-		<div class="section">
-			<div class="container">
-				<h1 class="text-center title" id="portfolio">Portfolio</h1>
-				<div class="separator"></div>
-				<p class="lead text-center">From big to small to little details, we've worked extra hard to know that our clients are pleased with our work. But enough chit-chat, let's get straight to the point and show you our finished products.</p>
-				<br>			
-				<div class="row object-non-visible" data-animation-effect="fadeIn">
-					<div class="col-md-12">
-
-						<!-- portfolio items start -->
-						<div class="isotope-container row grid-space-20">
-							<div class="col-sm-6 col-md-3 isotope-item web-design">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="images/portfolio-1.jpg" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-1">
-											<i class="fa fa-search-plus"></i>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-1">Lemony App</a>
-								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="project-1" tabindex="-1" role="dialog" aria-labelledby="project-1-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-1-label">Lemony App</h4>
-											</div>
-											<div class="modal-body">
-												<h3>Project Description</h3>
-												<div class="row">
-													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-													</div>
-													<div class="col-md-6">
-														<img src="images/portfolio-1.jpg" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<a href="http://www.lemonyapp.com/" target="_blank"><button type="button" class="btn btn-sm btn-default">www.lemonyapp.com</button></a>
-												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Modal end -->
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item app-development">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="images/portfolio-2.jpg" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-2">
-											<i class="fa fa-search-plus"></i>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-2">RELeCo</a>
-								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="project-2" tabindex="-1" role="dialog" aria-labelledby="project-2-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-2-label">RELeCo</h4>
-											</div>
-											<div class="modal-body">
-												<h3>Project Description</h3>
-												<div class="row">
-													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-													</div>
-													<div class="col-md-6">
-														<img src="images/portfolio-2.jpg" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<a href="http://releco.fiveofhearts.eu/" target="_blank"><button type="button" class="btn btn-sm btn-default">www.releco.fiveofhearts.eu</button></a>
-												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Modal end -->
-							</div>
-							
-							<div class="col-sm-6 col-md-3 isotope-item web-design">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="images/portfolio-3.jpg" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-3">
-											<i class="fa fa-search-plus"></i>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-3">Success From Fitness</a>
-								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="project-3" tabindex="-1" role="dialog" aria-labelledby="project-3-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-3-label">Success From Fitness</h4>
-											</div>
-											<div class="modal-body">
-												<h3>Project Description</h3>
-												<div class="row">
-													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-													</div>
-													<div class="col-md-6">
-														<img src="images/portfolio-3.jpg" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<a href="https://successfromfitness.com/" target="_blank"><button type="button" class="btn btn-sm btn-default">www.successfromfitness.com</button></a>
-												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Modal end -->
-							</div>
-							
-							<div class="col-sm-6 col-md-3 isotope-item site-building">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="images/portfolio-4.jpg" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-4">
-											<i class="fa fa-search-plus"></i>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-4">Henrik Skov</a>
-								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="project-4" tabindex="-1" role="dialog" aria-labelledby="project-4-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-4-label">Henrik Skov</h4>
-											</div>
-											<div class="modal-body">
-												<h3>Project Description</h3>
-												<div class="row">
-													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-													</div>
-													<div class="col-md-6">
-														<img src="images/portfolio-4.jpg" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="modal-footer">
-
-												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Modal end -->
-							</div>
-							
-							<div class="col-sm-6 col-md-3 isotope-item app-development">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="images/portfolio-5.jpg" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-5">
-											<i class="fa fa-search-plus"></i>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-5">Tolke Agenten Danmark</a>
-								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="project-5" tabindex="-1" role="dialog" aria-labelledby="project-5-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-5-label">Tolke Agenten Danmark</h4>
-											</div>
-											<div class="modal-body">
-												<h3>Project Description</h3>
-												<div class="row">
-													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-													</div>
-													<div class="col-md-6">
-														<img src="images/portfolio-5.jpg" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<a href="http://tolkeagenten.dk/" target="_blank"><button type="button" class="btn btn-sm btn-default">www.tolkeagenten.dk</button></a>
-												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Modal end -->
-							</div>
-							
-							<div class="col-sm-6 col-md-3 isotope-item web-design">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="images/portfolio-6.jpg" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-6">
-											<i class="fa fa-search-plus"></i>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-6">Asociatia Sema</a>
-								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="project-6" tabindex="-1" role="dialog" aria-labelledby="project-6-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-6-label">Project Title</h4>
-											</div>
-											<div class="modal-body">
-												<h3>Asociatia Sema</h3>
-												<div class="row">
-													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-													</div>
-													<div class="col-md-6">
-														<img src="images/portfolio-6.jpg" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<a href="http://www.asociatia-sema.ro/" target="_blank"><button type="button" class="btn btn-sm btn-default">www.asociatia-sema.ro</button></a>
-												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Modal end -->
-							</div>
-							
-							<div class="col-sm-6 col-md-3 isotope-item site-building">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="images/portfolio-7.jpg" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-7">
-											<i class="fa fa-search-plus"></i>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-7">AGJ Aukcion</a>
-								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="project-7" tabindex="-1" role="dialog" aria-labelledby="project-7-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-7-label">AGJ Aukcion</h4>
-											</div>
-											<div class="modal-body">
-												<h3>Project Description</h3>
-												<div class="row">
-													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-													</div>
-													<div class="col-md-6">
-														<img src="images/portfolio-7.jpg" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<a href="https://www.agj-aukcion.dk/" target="_blank"><button type="button" class="btn btn-sm btn-default">www.agj-aukcion.dk</button></a>
-												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Modal end -->
-							</div>
-							
-							<div class="col-sm-6 col-md-3 isotope-item web-design">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="images/portfolio-8.jpg" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-8">
-											<i class="fa fa-search-plus"></i>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-8">Anca Georgiana V</a>
-								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="project-8" tabindex="-1" role="dialog" aria-labelledby="project-8-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-8-label">Anca Georgiana V</h4>
-											</div>
-											<div class="modal-body">
-												<h3>Project Description</h3>
-												<div class="row">
-													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-													</div>
-													<div class="col-md-6">
-														<img src="images/portfolio-8.jpg" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<a href="http://ancagv.com/" target="_blank"><button type="button" class="btn btn-sm btn-default">www.ancagv.com</button></a>
-												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Modal end -->
-							</div>
-
-						</div>
-						<!-- portfolio items end -->
-					
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- section end -->
-
-		<!-- section start -->
-		<!-- ================ -->
-		<div class="section translucent-bg bg-image-2 pb-clear">
-			<div class="container object-non-visible" data-animation-effect="fadeIn">
-				<h1 id="clients" class="title text-center">Clients</h1>
-				<div class="space"></div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="media testimonial">
-							<div class="media-left">
-								<img src="images/testimonial-1.png" alt="">
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">You are Amazing!</h3>
-								<blockquote>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo.</p>
-									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-								</blockquote>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="media testimonial">
-							<div class="media-left">
-								<img src="images/testimonial-2.png" alt="">
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">Yeah!</h3>
-								<blockquote>
-									<p>Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus.</p>
-									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-								</blockquote>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="media testimonial">
-							<div class="media-left">
-								<img src="images/testimonial-3.png" alt="">
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">Thank You!</h3>
-								<blockquote>
-									<p>Aperiam consequatur quo quis exercitationem reprehenderit suscipit iste placeat.</p>
-									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-								</blockquote>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- section start -->
-			<!-- ================ -->
-			<div class="translucent-bg blue">
-				<div class="container">
-					<div class="list-horizontal">
 						<div class="row">
-							<div class="col-xs-4">
-								<div class="list-horizontal-item">
-									<img src="images/client-2.png" alt="client">
-								</div>
+							<div class="col-lg-12">
+								<textarea class="form-control" placeholder="Message"></textarea>
+								<p>
+									<button type="button" class="btn btn-primary">SEND</button>
+								</p>
+								
 							</div>
-							<div class="col-xs-4">
-								<div class="list-horizontal-item">
-									<img src="images/client-3.png" alt="client">
-								</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-6">
+								<p class="no_bottom">
+									<i class="fa fa-map-marker" aria-hidden="true"></i>
+									<span>Korsvang 46 2 MF</span>
+								</p>
+								<p>
+									<span>5610 Assens Denmark</span>
+								</p>
 							</div>
-							<div class="col-xs-4">
-								<div class="list-horizontal-item">
-									<img src="images/client-4.png" alt="client">
-								</div>
+							<div class="col-lg-6">
+								<p class="no_bottom">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+									<span>+45 91963002</span>
+								</p>
+								<p>
+									<i class="fa fa-envelope" aria-hidden="true"></i>
+									<span>mail@fiveofhearts.dk</span>
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<p class="no_bottom">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+									<span>Monday - Friday: 09:00 - 17:00</span>
+								</p>
+								<p>
+									<span>Saturday - Sunday: Closed</span>
+								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- section end -->
+			<footer id="footer">
+				<p id="social_icons">
+					<a href="">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					<a href="">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+					<a href="">
+						<i class="fa fa-google-plus" aria-hidden="true"></i>
+					</a>
+					<a href="">
+						<i class="fa fa-linkedin" aria-hidden="true"></i>
+					</a>
+					<a href="">
+						<i class="fa fa-youtube-play" aria-hidden="true"></i>
+					</a>
+				</p>
+				<p id="copyright">Copyright &#169; Five of Hearts | CVR: 37219959</p>
+			</footer>
+		</section>
+		<div id="modal_1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal_1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title">Anca GV Blog</h4>
+					</div>
+					<div class="modal-body">
+						<img class="modal_pic" src="img/portfolio1b.png">
+						<img class="divider" src="img/divider.png">
+						<a href="https://ancagv.wordpress.com" target="_blank">
+							<button type="button" class="btn btn-primary">SEE PROJECT</button>
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
-		<!-- section end -->
-
-		<!-- footer start -->
-		<!-- ================ -->
-		<footer id="footer">
-
-			<!-- .footer start -->
-			<!-- ================ -->
-			<div class="footer section">
-				<div class="container">
-					<h1 class="title text-center" id="contact">Contact Us</h1>
-					<div class="space"></div>
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="footer-content">
-								<p class="large">Contact us in any way you want. Come and say hello!</p>
-								<ul class="list-icons">
-									<li><i class="fa fa-map-marker pr-10"></i> Korsvang 46, 2. mf.</li>
-									<li><i class="fa fa-building pr-10"></i> 5610 Assens, Denmark</li>
-									<li><i class="fa fa-phone pr-10"></i> +45 91963002</li>
-									<li><i class="fa fa-envelope-o pr-10"></i> mail@fiveofhearts.dk</li>
-								</ul>
-								<ul class="social-links">
-									<li class="facebook"><a target="_blank" href="https://www.facebook.com/FiveofHeartsInc"><i class="fa fa-facebook"></i></a></li>
-									<li class="twitter"><a target="_blank" href="https://twitter.com/FiveofHeartsInc"><i class="fa fa-twitter"></i></a></li>
-									<li class="googleplus"><a target="_blank" href="https://plus.google.com/+FiveofHeartsInc"><i class="fa fa-google-plus"></i></a></li>
-									<li class="linkedin"><a target="_blank" href="https://www.linkedin.com/company/10179514"><i class="fa fa-linkedin"></i></a></li>
-									<li class="youtube"><a target="_blank" href="https://www.youtube.com/user/FiveofHeartsInc"><i class="fa fa-youtube"></i></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="footer-content">
-								<form role="form" id="footer-form">
-									<div class="form-group has-feedback">
-										<label class="sr-only" for="name2">Name</label>
-										<input type="text" class="form-control" id="name2" placeholder="Name" name="name2" required>
-										<i class="fa fa-user form-control-feedback"></i>
-									</div>
-									<div class="form-group has-feedback">
-										<label class="sr-only" for="email2">Email address</label>
-										<input type="email" class="form-control" id="email2" placeholder="Enter email" name="email2" required>
-										<i class="fa fa-envelope form-control-feedback"></i>
-									</div>
-									<div class="form-group has-feedback">
-										<label class="sr-only" for="message2">Message</label>
-										<textarea class="form-control" rows="8" id="message2" placeholder="Message" name="message2" required></textarea>
-										<i class="fa fa-pencil form-control-feedback"></i>
-									</div>
-									<input type="submit" value="Send" class="btn btn-default">
-								</form>
-							</div>
-						</div>
+		<div id="modal_2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal_1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title">Lemony App</h4>
+					</div>
+					<div class="modal-body">
+						<img class="modal_pic" src="img/portfolio2b.png">
+						<img class="divider" src="img/divider.png">
+						<a href="http://www.lemonyapp.com" target="_blank">
+							<button type="button" class="btn btn-primary">SEE PROJECT</button>
+						</a>
 					</div>
 				</div>
 			</div>
-			<!-- .footer end -->
-
-			<!-- .subfooter start -->
-			<!-- ================ -->
-			<div class="subfooter">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<p class="text-center">Copyright © Five of Hearts &#183; CVR: 37219959</p>
-						</div>
+		</div>
+		<div id="modal_3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal_1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title">MJ Magazine</h4>
+					</div>
+					<div class="modal-body">
+						<img class="modal_pic" src="img/portfolio3b.png">
+						<img class="divider" src="img/divider.png">
+						<a href="https://mj-magazine.dk" target="_blank">
+							<button type="button" class="btn btn-primary">SEE PROJECT</button>
+						</a>
 					</div>
 				</div>
 			</div>
-			<!-- .subfooter end -->
-
-		</footer>
-		<!-- footer end -->
-
-		<!-- JavaScript files placed at the end of the document so the pages load faster
-		================================================== -->
-		<!-- Jquery and Bootstap core js files -->
-		<script type="text/javascript" src="plugins/jquery.min.js"></script>
-		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-
-		<!-- Modernizr javascript -->
-		<script type="text/javascript" src="plugins/modernizr.js"></script>
-
-		<!-- Isotope javascript -->
-		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
-		
-		<!-- Backstretch javascript -->
-		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
-
-		<!-- Appear javascript -->
-		<script type="text/javascript" src="plugins/jquery.appear.js"></script>
-
-		<!-- Initialization of Plugins -->
-		<script type="text/javascript" src="js/template.js"></script>
-
-		<!-- Custom Scripts -->
-		<script type="text/javascript" src="js/custom.js"></script>
-
+		</div>
+		<div id="modal_4" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal_1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title">SEMA Association</h4>
+					</div>
+					<div class="modal-body">
+						<img class="modal_pic" src="img/portfolio4b.png">
+						<img class="divider" src="img/divider.png">
+						<a href="http://www.asociatia-sema.ro" target="_blank">
+							<button type="button" class="btn btn-primary">SEE PROJECT</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal_5" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal_1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title">Henrik Skov</h4>
+					</div>
+					<div class="modal-body">
+						<img class="modal_pic" src="img/portfolio5b.png">
+						<img class="divider" src="img/divider.png">
+						<a href="http://henrikskov.com" target="_blank">
+							<button type="button" class="btn btn-primary">SEE PROJECT</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal_6" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal_1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title">Tech Dictionary</h4>
+					</div>
+					<div class="modal-body">
+						<img class="modal_pic" src="img/portfolio6b.png">
+						<img class="divider" src="img/divider.png">
+						<a href="http://tech-dictionary.com" target="_blank">
+							<button type="button" class="btn btn-primary">SEE PROJECT</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.bxslider.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('a[href^="#"]').on('click',function(e){
+				e.preventDefault();
+				$(document).off('scroll');
+				$('a').each(function(){
+					$(this).parent().removeClass('active');
+				});
+				$(this).parent().addClass('active');
+				var target = this.hash,menu = target;
+				$target = $(target);
+				$('html, body').stop().animate({'scrollTop': $target.offset().top}, 1000, 'swing', function(){
+					window.location.hash = target;
+					$(document).on('scroll', onScroll);
+				});
+			});
+		    $(document).on("scroll", onScroll);
+		    $('.bxslider').bxSlider({
+		    	auto: true,
+		    	pause: 5000
+		    });
+		});
+		function onScroll(event){
+		    var scrollPos = $(document).scrollTop();
+		    $('.nav li a').each(function(){
+		        var currLink = $(this);
+		        var refElement = $(currLink.attr('href'));
+		        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos){
+		            $('.nav li').removeClass('active');
+		            currLink.parent().addClass('active');
+		        } else {
+		        	currLink.parent().removeClass('active');
+		        }
+		    });
+		}
+		</script>
 	</body>
 </html>
